@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+}
+
+p {
+    margin: 30px;
+}
+
+.container {
+    height: 500px;
+}
+
+.item {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background-image: url(../img/児玉さん2.webp);
+    /*  transform-origin: 0 0; */
+}
+
+.position {
+    background: #f08080;
+}

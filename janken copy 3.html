@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample copy3.css">
+  <title>じゃんけん</title>
+</head>
+
+<body background="img/img-haikei.png">
+
+
+
+  <div class="container">
+    <div class="item translate"></div>
+    <div class="item position"></div>
+  </div>
+  <p><a href="https://1-notes.com/javascript-scale-animation-with-animate/" target="_blank" rel="noopener">JavaScript
+      |
+      Move diagonally animation with animate</a></p>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+
+    document.querySelector(`.translate`).animate(
+
+      { transform: 'translate(0, 0)' },
+      { transform: 'translate(600px, 600px)' }
+      ,
+      {
+        duration: 1000,
+        iterations: Infinity,
+        direction: 'alternate'
+      }
+    );
+
+    // position
+    document.querySelector(`.position`).animate(
+      [
+        { top: '100px', left: '100px' },
+        { top: '0px', left: '0px' }
+      ],
+      {
+        duration: 1000,
+        iterations: Infinity,
+        direction: 'alternate'
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

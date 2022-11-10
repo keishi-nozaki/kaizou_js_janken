@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乱数発生の練習</title>
+</head>
+
+<body>
+  <h1>乱数発生の練習</h1>
+
+  <script>
+    // ここに処理を追加
+
+    const randomNumber1 = Math.random();
+    //console.log(randomNumber1);
+
+    const randomNumber2 = Math.floor(Math.random() * 5);
+    //console.log(randomNumber2);
+
+    const randomNumber_q1_min = Math.floor(Math.random() * 0);
+    //console.log(randomNumber_q1_min);
+
+    const randomNumber_q1_max = Math.floor(Math.random() * 10);
+    //console.log(randomNumber_q1_max);
+
+    const randomNumber_q2_min = Math.floor(Math.random() * 9);
+    const number1 = 1;
+    const sum = randomNumber_q2_min + number1
+    //console.log(sum);
+
+    //１～９
+    const randomNumber_2_min = Math.floor(Math.random() * 9) + 1;
+    //console.log(randomNumber_q2_min);
+
+    //５～１０
+    const randomNumber_3 = Math.floor(Math.random() * 6) + 5;
+    //console.log(randomNumber_3);
+
+    //５０～９９
+    const randomNumber_ = Math.floor(Math.random() * 99 - 50 + 1) + 50;
+    //console.log(randomNumber_3);
+
+    //１～９
+    const min = 1;
+    const max = 10;
+    const randomNumber_4 = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log(randomNumber_4);
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>じゃんけん</title>
+</head>
+
+<body background="img/img-haikei.png">
+
+
+  <main>
+    <ul>
+      <li id="gu_btn">グー</li>
+      <li id="cho_btn">チョキ</li>
+      <li id="par_btn">パー</li>
+    </ul>
+    <div id="com_hand">コンピュータの出した手は？</div>
+    <div id="result">結果は？</div>
+
+    <video id="video">
+      <source src="img/【メダルゲーム】これ採用.mp4" type="video/mp4">
+    </video>
+    <div class="btns">
+      <button id="videoPlay" class="btn btn-primary">動画再生</button><!-- #videoPlay -->
+    </div>
+
+    <div id="roulette">ルーレット</div>
+    <div id="roulette_result">ルーレット結果</div>
+
+
+
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    //ここに処理を追加
+
+    const videoBtn = document.getElementById('videoPlay');
+
+    $('#videoPlay').click(function () {
+      $('#video').get(0).play();
+    });
+
+    $('#roulette').on('click', function () {
+      const min = 0;
+      const max = 3;
+      const randomNumber_r = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomNumber_r);
+
+      if (randomNumber_r === 0) {
+        $('#roulette_result').text('1');
+      }
+      if (randomNumber_r === 1) {
+        $('#roulette_result').text('7');
+      }
+      if (randomNumber_r === 2) {
+        $('#roulette_result').text('10');
+      }
+      if (randomNumber_r === 3) {
+        $('#roulette_result').text('20');
+      }
+
+
+    })
+
+    $('#gu_btn').on('click', function () {
+      const min = 0;
+      const max = 2;
+      const randomNumber_j = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomNumber_j);
+
+      if (randomNumber_j === 0) {
+        $('#com_hand').text('コンピュータの出した手は？：グー');
+        $('#result').text('結果は？：あいこー');
+
+
+      }
+      if (randomNumber_j === 1) {
+        $('#com_hand').text('コンピュータの出した手は？：チョキ');
+        $('#result').text('結果は？：あなたの勝ち');
+        $('#video').prettyEmbed(
+          '<iframe width="560" height="315" src="https://www.youtube.com/embed/l9Iec98Zc4o?clip=UgkxFnr6iy-MCFs1jrUybIV5w8ztiRsEVzYP&amp;clipt=EIieAxiQxQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        )
+
+      }
+
+      if (randomNumber_j === 2) {
+        $('#com_hand').text('コンピュータの出した手は？：パー');
+        $('#result').text('結果は？：あなたの負け');
+      }
+
+    })
+
+    $('#cho_btn').on('click', function () {
+      const min = 0;
+      const max = 2;
+      const randomNumber_j = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomNumber_j);
+
+      if (randomNumber_j === 0) {
+        $('#com_hand').text('コンピュータの出した手は？：グー');
+        $('#result').text('結果は？：あなたの負け');
+      }
+      if (randomNumber_j === 1) {
+        $('#com_hand').text('コンピュータの出した手は？：チョキ');
+        $('#result').text('結果は？：あいこ');
+
+      }
+      if (randomNumber_j === 2) {
+        $('#com_hand').text('コンピュータの出した手は？：パー');
+        $('#result').text('結果は？：あなたの勝ち');
+      }
+
+    })
+
+    $('#par_btn').on('click', function () {
+      const min = 0;
+      const max = 2;
+      const randomNumber_j = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomNumber_j);
+
+      if (randomNumber_j === 0) {
+        $('#com_hand').text('コンピュータの出した手は？：グー');
+        $('#result').text('結果は？：あなたの勝ち');
+      }
+      if (randomNumber_j === 1) {
+        $('#com_hand').text('コンピュータの出した手は？：チョキ');
+        $('#result').text('結果は？：あなたの負け');
+
+      }
+      if (randomNumber_j === 2) {
+        $('#com_hand').text('コンピュータの出した手は？：パー');
+        $('#result').text('結果は？：あいこ');
+      }
+
+    })
+
+  </script>
+
+</body>
+
+</html>
